@@ -3,10 +3,10 @@
 #include <opencv2/opencv.hpp>
 #include <opencv2/saliency.hpp>
 #include <boost/python.hpp>
-#include <boost/numpy.hpp>
+#include <boost/python/numpy.hpp>
 
 namespace py = boost::python;
-namespace np = boost::numpy;
+namespace np = boost::python::numpy;
 namespace sa = cv::saliency;
 
 class BING {

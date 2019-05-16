@@ -7,7 +7,13 @@ fi
 
 cd build
 
-cmake ../
+cmake -Dboost_filesystem_DIR=/usr/local/lib/cmake/boost_filesystem-1.70.0 \ 
+      -Dboost_headers_DIR= /usr/local/lib/cmake/boost_headers-1.70.0 \ 
+      -Dboost_python_DIR=/usr/local/lib/cmake/boost_python-1.70.0 \
+      -Dboost_system_DIR=/usr/local/lib/cmake/boost_system-1.70.0 \
+      -DCMAKE_INSTALL_PREFIX=/usr/local \ 
+      -DBUILD_SHARED_LIBS=ON \ 
+      -DBoost_USE_STATIC_LIBS=OFF ../
 make
 touch __init__.py
 

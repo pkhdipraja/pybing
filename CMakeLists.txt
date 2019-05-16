@@ -4,7 +4,7 @@ set(CMAKE_BUILD_TYPE "Release")
 set(CMAKE_CXX_FLAGS "-O3")
 
 find_package(OpenCV REQUIRED)
-find_package(Boost COMPONENTS system filesystem python3 REQUIRED)
+find_package(Boost COMPONENTS system filesystem python REQUIRED)
 find_package(PythonLibs REQUIRED)
 
 set(inc_dirs
@@ -23,7 +23,7 @@ set(lib_dirs
 )
 
 set(libs
-  boost_numpy
+  boost_numpy35
   ${Boost_LIBRARIES}
   ${PYTHON_LIBRARY}
   ${OpenCV_LIBS}
